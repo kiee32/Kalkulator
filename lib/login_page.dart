@@ -45,7 +45,7 @@ class _LoginPageState extends State<LoginPage> {
           ),
 
           CustomButton(
-            backgroundColor: const Color.fromARGB(255, 30, 175, 44), 
+            backgroundColor: const Color.fromARGB(255, 12, 12, 12), 
             foregroundColor: Colors.white, 
             onPressed: () {
               setState(() {
@@ -60,13 +60,14 @@ class _LoginPageState extends State<LoginPage> {
                 }
               });
             },
-            child: CustomText(
-              textController: TextEditingController(text: "Login"),
-              fontSize: 30,
-              textColor: const Color.fromARGB(255, 30, 175, 44),
-              fontWeight: FontWeight.bold,
+           child: const Text(
+              "Login",
+              style: TextStyle(
+                fontSize: 30,
+                fontWeight: FontWeight.bold,
           ),
             ),
+          ),
         ],
       ),
     );

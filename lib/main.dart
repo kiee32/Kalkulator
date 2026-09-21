@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:project_satu/kalkulator_page.dart';
+
+
+import 'package:project_satu/login_page.dart';
 
 
 
@@ -33,7 +35,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const KalkulatorPage(),
+      home: const LoginPage(),
     );
   }
 }
