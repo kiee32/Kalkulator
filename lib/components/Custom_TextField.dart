@@ -1,23 +1,25 @@
 import 'package:flutter/material.dart';
 
-class CustomTextField extends StatelessWidget {
-  // Variabel yng diperlukan
-  final String hint;
-  final TextEditingController textController;
+class CustomTextfield extends StatelessWidget {
+  // variabel yang diperlukan
+  final String myHint;
 
-  const CustomTextField({
+  final TextEditingController txtController;
+  const CustomTextfield({
     super.key,
-    required this.hint, 
-    required this.textController
-    });
+    required this.myHint,
+    required this.txtController,
+  });
 
   @override
   Widget build(BuildContext context) {
     return TextField(
-      controller: textController,
+       keyboardType: const TextInputType.numberWithOptions(decimal: true),
+      controller: txtController,
       decoration: InputDecoration(
-        hint: Text(hint),
-         border: OutlineInputBorder(borderRadius: BorderRadius.circular(10))),
+        hint: Text(myHint),
+        border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
+      ),
     );
   }
 }
