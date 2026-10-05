@@ -12,7 +12,7 @@ class KalkulatorPage extends StatelessWidget {
     TextEditingController txtangka1 = TextEditingController();
     TextEditingController txtangka2 = TextEditingController();
 
-  // Mengecek apakah input kosong
+
   bool cekInput() {
     if (txtangka1.text.isEmpty || txtangka2.text.isEmpty) {
       Get.snackbar(
@@ -34,8 +34,8 @@ class KalkulatorPage extends StatelessWidget {
       appBar: AppBar(title: Text("my kalkulator")),
       body: Column(
         children: [
-          CustomTextfield(myHint: "input angka 1", txtController: txtangka1),
-          CustomTextfield(myHint: "input angka 2", txtController: txtangka2),
+          CustomTextField(myHint: "input angka 1", txtController: txtangka1),
+          CustomTextField(myHint: "input angka 2", txtController: txtangka2),
           
           
           Row(
