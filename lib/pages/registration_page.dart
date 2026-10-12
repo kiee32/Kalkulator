@@ -78,7 +78,6 @@ class RegistrationPage extends StatelessWidget {
                   arguments: {
                     "nama_lengkap": txtnama.text,
                     "email": txtemail.text,
-                    
                     "jenis_kelamin": selectedJenisKelamin.value,
                     "alamat": txtalamat.text,
                     "nowa": txtnowa.text,

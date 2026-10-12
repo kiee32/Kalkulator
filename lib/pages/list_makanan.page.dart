@@ -1,0 +1,55 @@
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:project_satu/controller/list_makanan.controller.dart';
+import 'package:project_satu/routes.dart';
+
+class ListMakananPage extends StatelessWidget {
+  ListMakananPage({super.key});
+
+  final controller = Get.put(ListMakananController());
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("List Makanan"),
+      ),
+      body: Container(
+        margin: const EdgeInsets.all(16.0),
+        child: ListView.builder(
+          itemCount: controller.listMakanan.length,
+          itemBuilder: (context, index) {
+            final makanan = controller.listMakanan[index];
+            return ListTile(
+              title: Text(
+                makanan.namamakanan,
+                style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              ),
+              subtitle: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                 
+                  Text("Rating: ${makanan.rating}"),
+                ],
+              ),
+              trailing: const Icon(Icons.arrow_forward_ios_rounded),
+              onTap: () {
+                Get.toNamed(
+                  Routes.detailmakanan,
+                  arguments: {
+                    'namamakanan': makanan.namamakanan,
+                    'rating': makanan.rating,
+                    'harga': makanan.harga,
+                    'ulasan': makanan.ulasan,
+                    'deskripsi': makanan.deskripsi,
+                    'gambar': makanan.gambar,
+                  },
+                );
+              },
+            );
+          },
+        ),
+      ),
+    );
+  }
+}
