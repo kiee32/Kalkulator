@@ -25,13 +25,7 @@ class ListMakananPage extends StatelessWidget {
                 makanan.namamakanan,
                 style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
-              subtitle: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                 
-                  Text("Rating: ${makanan.rating}"),
-                ],
-              ),
+               subtitle: Text("Rating: ${makanan.rating}", style: TextStyle(fontSize: 15)),
               trailing: const Icon(Icons.arrow_forward_ios_rounded),
               onTap: () {
                 Get.toNamed(
